@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScoreKeeperApp</string>
+    <string name="score">Score</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
+
+    <!-- Resources for button strings -->
+    <string name="addGoal">Add Goal</string>
+    <string name="addPenaltyKick">Add Penalty Kick</string>
+</resources>

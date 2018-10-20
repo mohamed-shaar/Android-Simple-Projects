@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/teamLabel"
+            android:text="@string/teamA"/>
+
+        <TextView
+            style="@style/ScoreTextView"
+            android:id="@+id/teamAscoreView"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/addGoal"
+            android:id="@+id/addGoalButtonTeamA"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/addPenaltyKick"
+            android:id="@+id/addPenaltyKickButtonTeamA"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/teamLabel"
+            android:text="@string/teamB" />
+
+        <TextView
+            style="@style/ScoreTextView"
+            android:id="@+id/teamBscoreView" />
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/addGoal"
+            android:id="@+id/addGoalButtonTeamB"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/addPenaltyKick"
+            android:id="@+id/addPenaltyKickButtonTeamB"/>
+
+    </LinearLayout>
+
+</LinearLayout>
