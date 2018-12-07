@@ -9,3 +9,6 @@ an application that starts a timer when start is presses and pauses when pause i
 
 ## Swipe-Refresh
 generates a random number when swiped down
+
+## Testing Notification
+press the button for some love
