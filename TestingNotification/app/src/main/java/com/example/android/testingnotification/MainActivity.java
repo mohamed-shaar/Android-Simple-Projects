@@ -23,6 +23,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupNotificationChannel();
+
+        Button button = findViewById(R.id.buttonNotification);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID);
+                mBuilder.setSmallIcon(R.drawable.greyheart);
+                mBuilder.setContentTitle("Hey You!");
+                mBuilder.setContentText("You are loved");
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.from(MainActivity.this);
+                notificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+            }
+        });
     }
 
     private NotificationChannel setupNotificationChannel(){
@@ -40,12 +54,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void sendNotificationAction(View view){
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID);
-        mBuilder.setSmallIcon(R.drawable.greyheart);
-        mBuilder.setContentTitle("Hey You!");
-        mBuilder.setContentText("You are loved");
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(NOTIFICATION_ID, mBuilder.build());
-    }
+
+
+//    public void sendNotificationAction(View view){
+//        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID);
+//        mBuilder.setSmallIcon(R.drawable.greyheart);
+//        mBuilder.setContentTitle("Hey You!");
+//        mBuilder.setContentText("You are loved");
+//        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+//        notificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+//    }
 }
